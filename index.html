@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matthew Self</title>
+  <meta name="description" content="Healthcare actuary specializing in VBC and ACA pricing, with ongoing research in weather extremes." />
+  <style>
+    :root {
+      --bg: #fafaf7;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --muted: #5c5c5c;
+      --border: #e5e3dc;
+      --accent: #2d5a87;
+      --accent-hover: #1e3f5f;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #161618;
+        --surface: #1f1f22;
+        --text: #ececec;
+        --muted: #a0a0a8;
+        --border: #2d2d31;
+        --accent: #7aa7d1;
+        --accent-hover: #a3c2e0;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 96px 24px 64px;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 0 0 8px;
+    }
+
+    .tagline {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin: 0 0 40px;
+    }
+
+    .bio {
+      font-size: 1rem;
+      color: var(--text);
+      margin: 0 0 56px;
+    }
+
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 600;
+      margin: 0 0 16px;
+    }
+
+    .apps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+
+    .app-card {
+      display: block;
+      padding: 18px 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+
+    .app-card:hover,
+    .app-card:focus-visible {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .app-card:focus-visible {
+      box-shadow: 0 0 0 3px rgba(45, 90, 135, 0.25);
+    }
+
+    .app-name {
+      font-weight: 600;
+      font-size: 1.02rem;
+      color: var(--accent);
+      margin: 0 0 4px;
+    }
+
+    .app-desc {
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin: 0;
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      margin-top: 48px;
+    }
+
+    @media (max-width: 480px) {
+      main { padding: 64px 20px 48px; }
+      h1 { font-size: 1.85rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Matthew Self</h1>
+    <p class="tagline">Healthcare actuary specializing in VBC and ACA pricing, with ongoing research in weather extremes.</p>
+
+    <p class="bio">
+      I'm an experienced actuary based in St. Louis, MO, focused on ACA pricing, valuation, and risk adjustment. I've led ACA pricing processes, built profitability models, and run in-depth data evaluations to support strategic decisions. Outside of healthcare, I work in Python and SQL on statistical research, including published work on weather extremes.
+    </p>
+
+    <p class="section-label">Projects</p>
+    <div class="apps">
+      <a class="app-card" href="https://aca.matthewself.com/">
+        <p class="app-name">aca.matthewself.com &rarr;</p>
+        <p class="app-desc">Aggregates public-use files for the ACA marketplace and provides unique views of the data.</p>
+      </a>
+      <a class="app-card" href="https://wx.matthewself.com/">
+        <p class="app-name">wx.matthewself.com &rarr;</p>
+        <p class="app-desc">Performs advanced statistical analysis on weather data.</p>
+      </a>
+    </div>
+
+    <footer>
+      &copy; <span id="year"></span> Matthew Self
+    </footer>
+  </main>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
