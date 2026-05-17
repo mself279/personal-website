@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Matthew Self</title>
-  <meta name="description" content="Healthcare actuary specializing in VBC and ACA pricing, with ongoing research in weather extremes." />
+  <meta name="description" content="Healthcare actuary specializing in VBC and ACA, with ongoing research in weather extremes." />
   <style>
     :root {
       --bg: #fafaf7;
@@ -47,6 +47,16 @@
       padding: 96px 24px 64px;
     }
 
+    .profile {
+      width: 140px;
+      height: 140px;
+      border-radius: 16px;
+      object-fit: cover;
+      display: block;
+      margin: 0 0 24px;
+      border: 1px solid var(--border);
+    }
+
     h1 {
       font-size: 2.25rem;
       font-weight: 600;
@@ -63,7 +73,24 @@
     .bio {
       font-size: 1rem;
       color: var(--text);
-      margin: 0 0 56px;
+      margin: 0 0 24px;
+    }
+
+    .bio:last-of-type {
+      margin-bottom: 56px;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s ease;
+    }
+
+    .contact a:hover,
+    .contact a:focus-visible {
+      border-bottom-color: var(--accent);
+      outline: none;
     }
 
     .section-label {
@@ -117,6 +144,22 @@
       margin: 0;
     }
 
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+
+    .gallery img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+
     footer {
       color: var(--muted);
       font-size: 0.85rem;
@@ -128,16 +171,23 @@
     @media (max-width: 480px) {
       main { padding: 64px 20px 48px; }
       h1 { font-size: 1.85rem; }
+      .profile { width: 120px; height: 120px; }
+      .gallery { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <main>
+    <img class="profile" src="images/profile.jpg" alt="Matthew Self with his cat" />
     <h1>Matthew Self</h1>
-    <p class="tagline">Healthcare actuary specializing in VBC and ACA pricing, with ongoing research in weather extremes.</p>
+    <p class="tagline">Healthcare actuary specializing in VBC and ACA, with ongoing research in weather extremes.</p>
 
     <p class="bio">
-      I'm an experienced actuary based in St. Louis, MO, focused on ACA pricing, valuation, and risk adjustment. I've led ACA pricing processes, built profitability models, and run in-depth data evaluations to support strategic decisions. Outside of healthcare, I work in Python and SQL on statistical research, including published work on weather extremes.
+      Based in St. Louis, MO, my background includes ACA pricing, valuation, and risk adjustment across both ACA and Medicare. I've led ACA pricing processes, built profitability models, and run in-depth data evaluations to support strategic decisions. Outside of healthcare, I work in Python and SQL on statistical research, including published work on weather extremes for the Society of Actuaries.
+    </p>
+
+    <p class="bio">
+      This site hosts several ongoing personal projects for public use.
     </p>
 
     <p class="section-label">Projects</p>
@@ -151,6 +201,21 @@
         <p class="app-desc">Performs advanced statistical analysis on weather data.</p>
       </a>
     </div>
+
+    <p class="section-label">Off the clock</p>
+    <p class="bio">
+      I love reading, exercise, climbing (bouldering and sport), hiking and backpacking, and traveling to the West Coast.
+    </p>
+
+    <div class="gallery">
+      <img src="images/yosemite.jpg" alt="Overlooking Yosemite Valley from a high vantage point" loading="lazy" />
+      <img src="images/rainier.jpg" alt="On a rocky trail with Mt. Rainier in the background" loading="lazy" />
+    </div>
+
+    <p class="section-label">Get in touch</p>
+    <p class="bio contact">
+      Reach out on <a href="https://www.linkedin.com/in/matthewtself/">LinkedIn</a> or at <a href="mailto:mselfgg6@gmail.com">mselfgg6@gmail.com</a> with any questions or thoughts.
+    </p>
 
     <footer>
       &copy; <span id="year"></span> Matthew Self
